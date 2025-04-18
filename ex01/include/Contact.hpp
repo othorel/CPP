@@ -11,15 +11,31 @@
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
-# define CNTACT_HPP
+# define CONTACT_HPP
 
 # include <string>
 # include <iostream>
+# include <iomanip>
+# include <limits>
 
 class Contact {
 	public:
 
 		Contact();
 		~Contact();
-		
-}
+		void setContact();
+    	bool isValid() const;
+  	 	void displaySummary(int index) const;
+    	void displayFull() const;
+
+	private:
+
+		std::string FirstName;
+		std::string LastName;
+		std::string NickName;
+		std::string PhoneNumber;
+		std::string DarkestSecret;
+		std::string formatField(const std::string& str) const;
+};
+
+#endif

@@ -15,16 +15,18 @@
 
 # include "Contact.hpp"
 
-# define RESET   "\033[0m"
 # define CYAN    "\033[36m"
 # define RED     "\033[31m"
+# define GREEN   "\033[32m"
 # define BOLD    "\033[1m"
+# define RESET   "\033[0m"
 
 class PhoneBook {
 	public:
 
 		PhoneBook();
 		~PhoneBook();
+
 		void add_contact(void);
 		void search_contact(void);
 

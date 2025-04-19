@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:51:22 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/18 09:55:39 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/19 11:37:08 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,23 +50,24 @@ void	PhoneBook::search_contact(void) {
 	std::cout << std::setw(10) << "Last name" << "|";
 	std::cout << std::setw(10) << "Nickname" << std::endl;
 	while (i < _count) {
-		contacts[i].displaySummary(i);
+		contacts[i].displaySummary(i + 1);
 		++i;
 	}
 	while (true) {
-		std::cout << "Enter index to view full contact ";
+		std::cout << GREEN << "Enter index to view full contact " RESET;
 		if (!(std::cin >> index)) {
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cerr << RED << "Invalid input. Please enter a valid number." << RESET << std::endl;
 			continue ;
 		}
-		if (index < 0 || index >= _count) {
-			std::cerr << RED << "Index out of range. Please enter a number between 0 and " << RESET << _count - 1 << "." << std::endl;
+		if (index < 1 || index > _count) {
+			std::cerr << RED << "Index out of range. Please enter a number between 1 and " << _count << "." << RESET << std::endl;
 			continue ;
 		}
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		break ;
 	}
+	index -= 1;
 	contacts[index].displayFull();
 }

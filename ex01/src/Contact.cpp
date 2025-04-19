@@ -28,10 +28,22 @@ void	Contact::setContact() {
 	std::getline(std::cin, NickName);
 	std::cout << "Phone number: ";
 	std::getline(std::cin, PhoneNumber);
+	while (!isPhoneNumberValid(PhoneNumber)) {
+		std::cerr << RED << "Phone number must contain digits only." << RESET << std::endl;
+		std::cout << "Phone number: ";
+		std::getline(std::cin, PhoneNumber);
+	}
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, DarkestSecret);
 }
 
+bool	Contact::isPhoneNumberValid(const std::string& number) const {
+	for (size_t i = 0; i < number.length(); ++i) {
+		if (!std::isdigit(number[i]))
+			return (false);
+	}
+	return (true);
+}
 
 bool	Contact::isValid() const {
 	if (FirstName.empty()) {

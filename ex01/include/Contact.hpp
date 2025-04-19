@@ -23,6 +23,7 @@ class Contact {
 
 		Contact();
 		~Contact();
+
 		void setContact();
     	bool isValid() const;
   	 	void displaySummary(int index) const;
@@ -36,6 +37,7 @@ class Contact {
 		std::string PhoneNumber;
 		std::string DarkestSecret;
 		std::string formatField(const std::string& str) const;
+		bool isPhoneNumberValid(const std::string& number) const;
 };
 
 #endif

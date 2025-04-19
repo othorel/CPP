@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 13:37:28 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/19 11:10:25 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/19 12:18:14 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void) {
 		std::cout << GREEN << "Please enter command (ADD, SEARCH, EXIT): " RESET;
 		std::getline(std::cin,command);
 		if (std::cin.eof()) {
-			std::cout << "\n👋 EOF received. Exiting." << std::endl;
+			std::cout << "\nEOF received. Exiting." << std::endl;
 			break ;
 		}
 		if (command == "ADD")

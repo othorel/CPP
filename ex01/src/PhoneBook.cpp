@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:51:22 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/19 11:37:08 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/19 12:18:07 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,12 @@ void	PhoneBook::search_contact(void) {
 	while (true) {
 		std::cout << GREEN << "Enter index to view full contact " RESET;
 		if (!(std::cin >> index)) {
+			if (std::cin.eof()) {
+				std::cout << "\nEOF received. Exiting." << std::endl;
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				return ;
+			}
 			std::cin.clear();
 			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 			std::cerr << RED << "Invalid input. Please enter a valid number." << RESET << std::endl;

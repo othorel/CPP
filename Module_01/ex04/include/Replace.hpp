@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:48:40 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/28 11:41:57 by olthorel         ###   ########.fr       */
+/*   Created: 2025/04/28 11:50:19 by olthorel          #+#    #+#             */
+/*   Updated: 2025/04/28 14:20:06 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-Weapon::Weapon(const std::string& type) : _type(type) {
-}
+# include <string>
+# include <iostream>
+# include <fstream>
 
-Weapon::~Weapon() {
-}
+# define RED     "\033[31m"
+# define CYAN    "\033[36m"
+# define RESET   "\033[0m"
 
-const std::string& Weapon::getType() const {
-	return (_type);	
-}
+class Replace {
+    public:
+    
+    Replace();
+    ~Replace();
+    
+    void processFile(const std::string& filename, const std::string& s1,const std::string& s2);
+};
 
-void Weapon::setType(const std::string& type) {
-	_type = type;
-}
+#endif

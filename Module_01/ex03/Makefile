@@ -1,11 +1,12 @@
-NAME    := weapon
+NAME    := violence
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-           $(SRCDIR)/Zombie.cpp \
-           $(SRCDIR)/ZombieHorde.cpp
+           $(SRCDIR)/Weapon.cpp \
+           $(SRCDIR)/HumanA.cpp \
+           $(SRCDIR)/HumanB.cpp 
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
 

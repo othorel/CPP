@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:48:40 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/28 11:41:57 by olthorel         ###   ########.fr       */
+/*   Created: 2025/04/28 13:44:31 by olthorel          #+#    #+#             */
+/*   Updated: 2025/04/28 13:44:37 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Replace.hpp"
 
-Weapon::Weapon(const std::string& type) : _type(type) {
-}
+int	main(int ac, char **av) {
+	std::string filename = av[1];
+	std::string s1 = av[2];
+	std::string s2 = av[3];
+	Replace replacer;
 
-Weapon::~Weapon() {
-}
-
-const std::string& Weapon::getType() const {
-	return (_type);	
-}
-
-void Weapon::setType(const std::string& type) {
-	_type = type;
+	if (ac != 4) {
+		std::cerr << RED << "Usage: ./replace <filename> <s1> <s2>" << RESET << std::endl;
+		return (1);
+	}
+	replacer.processFile(filename, s1, s2);
+	return (0);
 }

@@ -27,8 +27,8 @@ class HumanA {
 
 	private:
 
-		std::string name;
-		Weapon& weapon;
+		std::string _name;
+		Weapon& _weapon;
 };
 
 #endif

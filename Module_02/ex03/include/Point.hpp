@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 10:19:18 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:59:29 by olthorel         ###   ########.fr       */
+/*   Created: 2025/04/29 16:38:58 by olthorel          #+#    #+#             */
+/*   Updated: 2025/04/29 16:44:35 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
-# include <iostream>
+# include "Fixed.hpp"
 
-class Fixed {
+class Point {
+	
 	public:
 	
-		Fixed();
-		Fixed(const Fixed& other);
-		~Fixed();
-		//Operateur affectation
-		Fixed& operator=(const Fixed& other);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-		
+		Point();
+		Point(const float x, const float y);
+		Point(const Point& other);
+		Point& operator=(const Point& other);
+		~Point();
+
+		Fixed getX() const;
+		Fixed getY() const;
+
 	private:
-	
-		int	_value;
-		static const int _fractBit = 8;
+
+		const Fixed x;
+		const Fixed y;
 };
 
 #endif

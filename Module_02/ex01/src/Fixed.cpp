@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:46:48 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:06:43 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/29 15:49:41 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int Fixed::getRawBits( void ) const {
 void Fixed::setRawBits( int const raw ) {
 	this->_value = raw;
 }
-
+//Conversion
 int Fixed::toInt( void ) const {
 	return (this->_value >> _fractBit);
 }
@@ -59,7 +59,7 @@ int Fixed::toInt( void ) const {
 float Fixed::toFloat( void ) const {
 	return ((float)this->_value / (1 << _fractBit));
 }
-
+//Surcharge <<
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
 	os << fixed.toFloat();
 	return (os);

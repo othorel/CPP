@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   bsp.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 10:19:18 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:59:29 by olthorel         ###   ########.fr       */
+/*   Created: 2025/04/29 16:51:56 by olthorel          #+#    #+#             */
+/*   Updated: 2025/04/29 16:57:56 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "Point.hpp"
 
-# include <iostream>
-
-class Fixed {
-	public:
-	
-		Fixed();
-		Fixed(const Fixed& other);
-		~Fixed();
-		//Operateur affectation
-		Fixed& operator=(const Fixed& other);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
-		
-	private:
-	
-		int	_value;
-		static const int _fractBit = 8;
-};
-
-#endif
+// Produit vectoriel (AB x AC)
+static Fixed crossVector(Point const& a, Point const& b, Point const& c) {
+	Fixed ab_x = b.getX() - a.getX();
+	Fixed ab_y = b.getX() - a.getY();
+	Fixed 
+}

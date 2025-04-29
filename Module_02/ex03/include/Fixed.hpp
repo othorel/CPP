@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/29 13:43:37 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:58:03 by olthorel         ###   ########.fr       */
+/*   Created: 2025/04/29 16:37:08 by olthorel          #+#    #+#             */
+/*   Updated: 2025/04/29 16:37:34 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,35 @@ class Fixed {
 		~Fixed();
 		//Operateur affectation
 		Fixed& operator=(const Fixed& other);
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
 		//Conversion
-		int toInt( void ) const;
 		float toFloat( void ) const;
+		int toInt( void ) const;
+		//Comparaison
+		bool operator>(const Fixed& other) const;
+		bool operator<(const Fixed& other) const;
+		bool operator>=(const Fixed& other) const;
+		bool operator<=(const Fixed& other) const;
+		bool operator==(const Fixed& other) const;
+		bool operator!=(const Fixed& other) const;
+		//Arithmetique
+		Fixed operator+(const Fixed& other) const;
+		Fixed operator-(const Fixed& other) const;
+		Fixed operator*(const Fixed& other) const;
+		Fixed operator/(const Fixed& other) const;
+		//Incrementation / Decrementation
+		Fixed& operator++();
+		Fixed operator++(int);
+		Fixed& operator--();
+		Fixed operator--(int);
+		//Min / Max
+		static Fixed& min(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 		
 	private:
 	
-		int	_value;
+		int	_fixedValue;
 		static const int _fractBit = 8;
 };
 //Surcharge operateur <<

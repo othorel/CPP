@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 16:38:02 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 16:38:39 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/30 09:37:04 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Fixed::Fixed(const Fixed& other) {
 
 Fixed::~Fixed() {
 }
-//Assignement operator
+//Assignement operator affectation
 Fixed& Fixed::operator=(const Fixed& other) {
 	if (this != &other) {
 		_fixedValue = other._fixedValue;

@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 16:38:58 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 16:44:35 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/30 10:04:14 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define POINT_HPP
 
 # include "Fixed.hpp"
+# include <iostream>
 
 class Point {
 	
@@ -33,5 +34,7 @@ class Point {
 		const Fixed x;
 		const Fixed y;
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

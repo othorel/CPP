@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 10:19:18 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:59:29 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/30 11:10:38 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Fixed {
 		
 	private:
 	
-		int	_value;
+		int	_fixedValue;
 		static const int _fractBit = 8;
 };
 

@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:43:37 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/29 14:58:03 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/04/30 11:11:46 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Fixed {
 		
 	private:
 	
-		int	_value;
+		int	_fixedValue;
 		static const int _fractBit = 8;
 };
 //Surcharge operateur <<

@@ -5,6 +5,7 @@ OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
            $(SRCDIR)/ClapTrap.cpp \
+           $(SRCDIR)/ScavTrap.cpp \
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
 

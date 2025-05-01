@@ -6,21 +6,21 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:00:52 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/01 12:02:24 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/01 13:04:03 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(const std::string& name) : ClavTrap(name) {
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name) {
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
 	std::cout << "ScavTrap constructor called for " << _name << std::endl;
 }
 
 ScavTrap::~ScavTrap() {
-	st::cout << "ScavTrap destructor called for " << _name << std::endl;
+	std::cout << "ScavTrap destructor called for " << _name << std::endl;
 }
 
 void ScavTrap::attack(const std::string& target) {

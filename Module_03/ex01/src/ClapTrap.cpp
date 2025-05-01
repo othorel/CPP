@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 14:41:44 by olthorel          #+#    #+#             */
-/*   Updated: 2025/04/30 14:42:02 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/01 11:53:59 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _ener
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap " << _name << " has been destroyed." << std::endl;
 }
+
+ClavTrap::ClavTrap(const ClavTrap& other) = default;
+
+ClavTrap ClavTrap::operator(const ClavTrap& other) = default;
 
 void ClapTrap::attack(const std::string& target) {
 	if (_hitPoints <= 0 || _energyPoints <= 0) {

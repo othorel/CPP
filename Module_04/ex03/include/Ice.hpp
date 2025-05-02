@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 16:14:13 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/01 16:14:13 by olthorel         ###   ########.fr       */
+/*   Created: 2025/05/02 15:40:16 by olthorel          #+#    #+#             */
+/*   Updated: 2025/05/02 15:40:16 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include "AMateria.hpp"
 
-class Dog : public Animal {
+class Ice : public AMateria {
 
 	public:
 
-		Dog();
-		Dog(std::string type);
-		Dog(const Dog& other);
-		Dog& operator=(const Dog& other);
-		~Dog();
+		Ice();
+		Ice(Ice const &other);
+		~Ice();
+		Ice& operator=(Ice const &other);
 
-		void makeSound() const;
-		Brain* getBrain() const;
-
-	private:
-
-		Brain* _brain;
+		AMateria* clone() const;
+		void use(ICharacter& target);
 };
 
 #endif

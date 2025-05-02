@@ -12,17 +12,17 @@
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : AAnimal("Cat") {
 	std::cout << "Cat constructeur called, type: Cat" << std::endl;
 	_brain = new Brain();
 }
 
-Cat::Cat(std::string type) : Animal(type) {
+Cat::Cat(std::string type) : AAnimal(type) {
 	std::cout << "Cat constructor called, type: " << type << std::endl;
 	_brain = new Brain();
 }
 
-Cat::Cat(const Cat& other) : Animal(other) {
+Cat::Cat(const Cat& other) : AAnimal(other) {
 	std::cout << "Cat copy constructor called on " << other._type << std::endl;
 	_brain = new Brain(*other._brain);
 }
@@ -30,7 +30,7 @@ Cat::Cat(const Cat& other) : Animal(other) {
 Cat& Cat::operator=(const Cat& other) {
 	std::cout << "Cat assignment operator called on " << other._type << std::endl;
 	if (this != &other) {
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		delete _brain;
 		_brain = new Brain(*other._brain);
 	}

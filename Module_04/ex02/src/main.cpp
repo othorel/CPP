@@ -14,10 +14,13 @@
 #include "Cat.hpp"
 
 int main() {
+	std::cout << "=== Trying to instantiate AAnimal (should fail) ===" << std::endl;
+	//AAnimal test; //test for instance
+
     std::cout << "=== Creating Animals ===" << std::endl;
 
     const int size = 10;
-    Animal* animals[size];
+    AAnimal* animals[size];
     srand(time(0));
 
     for (int i = 0; i < size; ++i) {

@@ -1,10 +1,10 @@
-NAME    := Animals
+NAME    := iventory
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-           $(SRCDIR)/Animal.cpp \
+           $(SRCDIR)/AAnimal.cpp \
            $(SRCDIR)/Cat.cpp \
            $(SRCDIR)/Dog.cpp \
            $(SRCDIR)/Brain.cpp \

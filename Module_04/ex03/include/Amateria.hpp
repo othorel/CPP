@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 18:01:05 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/01 18:01:05 by olthorel         ###   ########.fr       */
+/*   Created: 2025/05/02 15:12:49 by olthorel          #+#    #+#             */
+/*   Updated: 2025/05/02 15:12:49 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_HPP
 
-# include <iostream>
 # include <string>
-# include <cstdlib>
-# include <ctime>
+# include <iostream>
+# include "ICharacter.hpp"
 
-class Brain {
+class AMateria {
 
 	public:
 
-		Brain();
-		Brain(const Brain& other);
-		Brain& operator=(const Brain& other);
-		~Brain();
+		AMateria();
+		AMateria(std::string const &type);
+		AMateria(AMateria const &other);
+		virtual ~AMateria();
+		AMateria& operator=(AMateria const &other);
 
-		const std::string& getIdea(int index) const;
-		void setIdea(int index, const std::string& ideas);
+		std::string const &getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 
-	private:
+	protected:
 
-		std::string _ideas[100];
+		std::string _type;
+
 };
 
 #endif

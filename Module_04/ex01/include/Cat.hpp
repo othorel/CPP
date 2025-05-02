@@ -27,6 +27,11 @@ class Cat : public Animal {
 		~Cat();
 
 		void makeSound() const;
+		Brain* getBrain() const;
+
+	private:
+
+		Brain* _brain;
 };
 
 #endif

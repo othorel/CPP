@@ -17,23 +17,23 @@
 # include "ICharacter.hpp"
 
 class Character : public ICharacter {
-    
-    public:
+	
+	public:
 
-        Character(std::string const &name);
-        Character(Character const &other);
-        ~Character();
-        Character& operator=(Character const &other);
+		Character(std::string const &name);
+		Character(Character const &other);
+		~Character();
+		Character& operator=(Character const &other);
 
-        std::string const &getName() const;
-        void equip(AMateria* m);
-        void unequip(int idx);
-        void use(int idx, ICharacter& target);
+		std::string const &getName() const;
+		void equip(AMateria* materia);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
 
-    private:
+	private:
 
-        std::string _name;
-        AMateria* _inventory[4];
+		std::string _name;
+		AMateria* _inventory[4];
 };
 
 #endif

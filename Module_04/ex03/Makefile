@@ -1,13 +1,14 @@
-NAME    := iventory
+NAME    := a.out
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-           $(SRCDIR)/AAnimal.cpp \
-           $(SRCDIR)/Cat.cpp \
-           $(SRCDIR)/Dog.cpp \
-           $(SRCDIR)/Brain.cpp \
+           $(SRCDIR)/AMateria.cpp \
+           $(SRCDIR)/Character.cpp \
+           $(SRCDIR)/Cure.cpp \
+           $(SRCDIR)/Ice.cpp \
+           $(SRCDIR)/MateriaSource.cpp \
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
 

@@ -6,14 +6,15 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 13:29:02 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/06 14:18:49 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/06 18:40:54 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AFORM_HPP
 # define AFORM_HPP
 
-# include "Bureaucrat.hpp"
+# include <string>
+# include <iostream>
 
 class Bureaucrat;
 

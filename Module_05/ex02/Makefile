@@ -5,7 +5,10 @@ OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
 		   $(SRCDIR)/Bureaucrat.cpp \
-		   $(SRCDIR)/Form.cpp \
+		   $(SRCDIR)/AForm.cpp \
+		   $(SRCDIR)/ShrubberyCreationForm.cpp \
+		   $(SRCDIR)/RobotomyRequestForm.cpp \
+		   $(SRCDIR)/PresidentialPardonForm..cpp \
 
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))

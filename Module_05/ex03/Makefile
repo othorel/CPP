@@ -1,4 +1,4 @@
-NAME    := AForm
+NAME    := Intern
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
@@ -9,6 +9,7 @@ SRC     := $(SRCDIR)/main.cpp \
 		   $(SRCDIR)/ShrubberyCreationForm.cpp \
 		   $(SRCDIR)/RobotomyRequestForm.cpp \
 		   $(SRCDIR)/PresidentialPardonForm.cpp \
+		   $(SRCDIR)/Intern.cpp \
 
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))

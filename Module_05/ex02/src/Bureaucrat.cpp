@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 13:16:15 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/06 13:27:03 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/09 11:44:25 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& b) {
 	return (os);
 }
 
-void Bureaucrat::signForm(Form& form) const {
+void Bureaucrat::signForm(AForm& form) const {
 	try {
 		form.beSigned(*this);
 		std::cout << _name << " signed " << form.getName() << std::endl;
@@ -79,10 +79,10 @@ void Bureaucrat::signForm(Form& form) const {
 	}
 }
 
-void executeForm(const AForm& form) const {
+void Bureaucrat::executeForm(const AForm& form) const {
 	try {
 		form.execute(*this);
-		std::cout << _name << " executed " << form.getName() << std::endl
+		std::cout << _name << " executed " << form.getName() << std::endl;
 	} catch  (std::exception& e) {
 		std::cout << _name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
 	}

@@ -1,4 +1,4 @@
-NAME    := bureaucrat
+NAME    := Bureaucrat
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj

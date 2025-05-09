@@ -1,4 +1,4 @@
-NAME    := bureaucrat
+NAME    := Form
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj

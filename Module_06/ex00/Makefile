@@ -1,16 +1,10 @@
-NAME    := Intern
+NAME    := convert
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-		   $(SRCDIR)/Bureaucrat.cpp \
-		   $(SRCDIR)/AForm.cpp \
-		   $(SRCDIR)/ShrubberyCreationForm.cpp \
-		   $(SRCDIR)/RobotomyRequestForm.cpp \
-		   $(SRCDIR)/PresidentialPardonForm.cpp \
-		   $(SRCDIR)/Intern.cpp \
-
+		   $(SRCDIR)/ScalarConverter.cpp \
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
 

@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 15:42:17 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/09 15:49:21 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/11 18:35:06 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <iomanip>
-# include <limits>
+# include <climits>
 # include <cstdlib>
 # include <cctype>
 # include <cmath>

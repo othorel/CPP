@@ -1,10 +1,10 @@
-NAME    := convert
+NAME    := Serialize
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-		   $(SRCDIR)/ScalarConverter.cpp \
+		   $(SRCDIR)/Serializer.cpp \
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
 

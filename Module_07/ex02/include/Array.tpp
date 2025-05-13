@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 13:55:37 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/13 15:28:39 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/13 15:44:03 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,14 @@ Array<T>::~Array() {
 template <typename T>
 T& Array<T>::operator[](size_t index) {
 	if (index >= _size)
-		throw outOfRange();
+		throw outOfBounds();
 	return (_array[index]);
 }
 
 template <typename T>
 const T& Array<T>::operator[](size_t index) const {
 	if (index >= _size)
-		throw outOfRange();
+		throw outOfBounds();
 	return (_array[index]);
 }
 
@@ -63,7 +63,7 @@ size_t Array<T>::size() const {
 }
 
 template <typename T>
-const char* Array<T>::outOfRange::what() const throw() {
+const char* Array<T>::outOfBounds::what() const throw() {
 	return ("Index out of bounds");
 }
 

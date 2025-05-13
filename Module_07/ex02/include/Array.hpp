@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/13 13:33:46 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/13 14:36:09 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/13 15:42:37 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Array {
 		T* _array;
 		size_t _size;
 
-		class outOfRange : public std::exception {
+		class outOfBounds : public std::exception {
 			
 			public:
 

@@ -1,10 +1,10 @@
-NAME    := easyfind
+NAME    := ex01
 INCDIR  := include
 SRCDIR  := src
 OBJDIR  := obj
 
 SRC     := $(SRCDIR)/main.cpp \
-		
+		   $(SRCDIR)/Span.cpp		
 
 
 OBJ     := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))

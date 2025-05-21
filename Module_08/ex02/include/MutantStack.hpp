@@ -16,6 +16,7 @@
 # include <stack>
 # include <iterator>
 # include <iostream>
+# include <list>
 
 template <typename T>
 

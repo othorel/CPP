@@ -6,7 +6,7 @@
 /*   By: olthorel <olthorel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 15:36:03 by olthorel          #+#    #+#             */
-/*   Updated: 2025/05/19 11:02:40 by olthorel         ###   ########.fr       */
+/*   Updated: 2025/05/21 14:17:23 by olthorel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main(int ac, char **av) {
 		vec.push_back(value);
 		deq.push_back(value);
 	}
-	printSequence(vec, "Before:");
+	printSequence(vec, "Before: ");
 	
 	std::clock_t startVec = std::clock();
 	PmergeMe::sortVector(vec);
@@ -59,7 +59,7 @@ int main(int ac, char **av) {
 	PmergeMe::sortDeque(deq);
 	std::clock_t endDeq = std::clock();
 
-	printSequence(vec, "After:");
+	printSequence(vec, "After:  ");
 
 	double timeVec = static_cast<double>(endVec - startVec) / CLOCKS_PER_SEC * 1e6;
 	double timeDeq = static_cast<double>(endDeq - startDeq) / CLOCKS_PER_SEC * 1e6;
